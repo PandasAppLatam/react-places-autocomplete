@@ -1,6 +1,6 @@
 {
-  "name": "react-places-autocomplete",
-  "version": "7.3.0",
+  "name": "@PandasAppLatam/react-places-autocomplete",
+  "version": "1.0.0",
   "description": "A React component for Google Maps Places Autocomplete",
   "main": "dist/index.js",
   "scripts": {
@@ -29,7 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kenny-hibino/react-places-autocomplete.git"
+    "url": "https://github.com/PandasAppLatam/react-places-autocomplete.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "React.js",
@@ -53,11 +56,12 @@
     "README.md"
   ],
   "author": "Ken Hibino <ken.hibino7@gmail.com> (http://www.kenhibino.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kenny-hibino/react-places-autocomplete/issues"
+  "release": {
+    "branches": [
+      "master"
+    ]
   },
-  "homepage": "https://github.com/kenny-hibino/react-places-autocomplete#readme",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-eslint": "8.2.2",
