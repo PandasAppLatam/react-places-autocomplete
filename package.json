@@ -1,13 +1,10 @@
 {
-  "name": "@PandasAppLatam/react-places-autocomplete",
-  "version": "1.0.0",
+  "name": "pandas-react-places-autocomplete",
+  "version": "1.0.5",
   "description": "A React component for Google Maps Places Autocomplete",
   "main": "dist/index.js",
   "scripts": {
-    "commit": "git-cz",
     "test": "jest /src",
-    "test:update": "jest /src --updateSnapshot",
-    "test:watch": "jest /src --watch",
     "test:coverage": "jest /src --coverage",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:*",
@@ -15,13 +12,7 @@
     "build:umd": "webpack --output-filename index.umd.js",
     "build:umd.min": "webpack --output-filename index.umd.min.js -p",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "demo": "webpack-dev-server --config demo/webpack.config.js --debug --content-base demo --inline --hot --colors",
-    "demo:test": "mocha demo/tests/index.spec.js --compilers js:babel-register",
-    "demo:build": "rimraf demo/dist && webpack --config demo/webpack.config.js -p",
-    "demo:deploy": "gh-pages -d demo/dist",
-    "prepublish": "npm run build",
-    "postpublish": "npm run demo:deploy",
-    "prettier": "prettier --write \"src/**/*.js\" \"demo/**/*.js\"",
+    "prettier": "prettier --write \"src/**/*.js\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format-code": "npm run prettier & npm run lint:fix",
@@ -30,9 +21,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/PandasAppLatam/react-places-autocomplete.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "React.js",
@@ -99,14 +87,6 @@
     "semantic-release": "^4.3.5",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
-    "ghooks": {
-      "pre-commit": "npm run test"
-    }
   },
   "babel": {
     "presets": [

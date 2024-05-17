@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /*
 * Copyright (c) 2016-present, Ken Hibino.
 * Licensed under the MIT License (MIT).
@@ -231,11 +232,11 @@ class PlacesAutocomplete extends React.Component {
   };
 
   handleInputChange = event => {
-    const position = event.target.selectionStart ?? 0;
+    const position = event.target.selectionStart;
     const { value } = event.target;
-    
+
     this.props.onChange(value, event);
-    
+
     this.setState({ userInputValue: value }, () => {
       if (!value) {
         this.clearSuggestions();
@@ -245,7 +246,7 @@ class PlacesAutocomplete extends React.Component {
         this.debouncedFetchPredictions();
       }
     });
-    target.selectionEnd = position;
+    event.target.setSelectionRange(position, position);
   };
 
   handleInputOnBlur = () => {
